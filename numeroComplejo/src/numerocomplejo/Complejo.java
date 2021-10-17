@@ -6,8 +6,11 @@
 package numerocomplejo;
 
 /**
- *
- * @author ramjam
+ * Clase Complejo: Esta clase se encarga de a traves de 2 numeros modelar las operaciones basicas de los nuemros complejos
+ * 
+ * 
+ * @author Adrian Celaya
+ * @version 15/10/21
  */
 public class Complejo {
     private float real;
@@ -44,20 +47,20 @@ public class Complejo {
         float x,y;
         x= this.real+ real;
         y=this.imaginaria + imaginaria;
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
     }
     
     public Complejo sumar(Complejo complejo){
         float x=real+complejo.real;
         float y=imaginaria+complejo.imaginaria;
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
         return new Complejo(x, y);
     }
     
     public static Complejo sumar(Complejo c1, Complejo c2){
         float x=c1.real+c2.real;
         float y=c1.imaginaria+c2.imaginaria;
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
         return new Complejo(x, y);
     }
     
@@ -66,7 +69,7 @@ public class Complejo {
         float x,y;
         x= this.real - real;
         y=this.imaginaria - imaginaria;
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
     }
     
     public Complejo restar(Complejo complejo){
@@ -78,7 +81,7 @@ public class Complejo {
     public static Complejo restar(Complejo c1, Complejo c2){
         float x=c1.real-c2.real;
         float y=c1.imaginaria-c2.imaginaria;
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
         return new Complejo(x, y);
     }
     
@@ -87,14 +90,14 @@ public class Complejo {
         float x,y;
         x=(this.real*real)+(-1*this.imaginaria*imaginaria);
         y=(this.real*imaginaria)+(this.imaginaria*real);
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
     }
     
     public Complejo producto(Complejo complejo){
         float x,y;
         x=(this.real*complejo.real)+(-1*this.imaginaria*complejo.imaginaria);
         y=(this.real*complejo.imaginaria)+(this.imaginaria*complejo.real);
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
         return new Complejo(x, y);
     }
     
@@ -102,7 +105,7 @@ public class Complejo {
         float x,y;
         x=(c1.real*c2.real)+(-1*c1.imaginaria*c2.imaginaria);
         y=(c1.real*c2.imaginaria)+(c1.imaginaria*c2.real);
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
         return new Complejo(x, y);
     }
     
@@ -116,7 +119,7 @@ public class Complejo {
         float y =(((this.real * imaginaria ) - 
             (this.imaginaria * real ))/((real * 
             real)+(imaginaria * imaginaria)));
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
         return new Complejo(x,y);
     }
     
@@ -129,7 +132,7 @@ public class Complejo {
             (this.imaginaria * complejo.real ))/((complejo.real * 
             complejo.real)+(complejo.imaginaria * 
             complejo.imaginaria)));
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
         return new Complejo(x,y);
     }
     
@@ -142,13 +145,13 @@ public class Complejo {
             (c1.imaginaria * c2.real ))/((c2.real * 
             c2.real)+(c2.imaginaria * 
             c2.imaginaria)));
-        System.out.println("("+x+"+"+y+"i)");
+        //System.out.println("("+x+"+"+y+"i)");
         return new Complejo(x,y);
     }
 
     @Override
     public String toString() {
-        return "Complejo: ("+real+"+"+imaginaria+"i)";
+        return "Complejo: ("+real+","+imaginaria+"i)";
     }
     
     

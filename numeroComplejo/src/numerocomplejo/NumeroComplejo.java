@@ -18,6 +18,8 @@ public class NumeroComplejo {
         Complejo c1 = new Complejo(2,3);
         Complejo c2 = new Complejo(4,-7);
         Complejo prueba = new Complejo();
+        prueba = Complejo.sumar(c1, c2);
+        System.out.println(prueba);
         prueba = c1.sumar(c2);
         System.out.println(prueba);
         prueba = c1.restar(c2);
@@ -26,6 +28,7 @@ public class NumeroComplejo {
         System.out.println(prueba);
         prueba = c1.division(c2);
         System.out.println(prueba);
+        
     }
     
 }
