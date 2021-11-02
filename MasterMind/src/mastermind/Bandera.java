@@ -20,18 +20,18 @@ public class Bandera {
     
     // Regresa un pin
     public String getPin(int posicion){
-        return pines[posicion-1];
+        return pines[posicion];
     }
     
     // Cambia el pin de una cierta posicion
     public void setPin(int posicion, String pin){
-        pines[posicion-1]=pin;
+        pines[posicion]=pin;
     }
     
     // Se encarga de Inicializar todos los pines 
     public void inicializar(){
         for(int i=0;i<pines.length;i++){
-            pines[i]="V";
+            pines[i]="cafeDark";
         }
     }
     

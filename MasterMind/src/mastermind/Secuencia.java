@@ -18,14 +18,22 @@ public class Secuencia {
         fichas = new String[4];
     }
     
+    public Secuencia(String[] fichas){
+        this.fichas = fichas;
+    }
+    
     //Regresa una ficha
     public String getFicha(int pos){
-        return fichas[pos-1];
+        return fichas[pos];
+    }
+    
+    public String[] getAllFicha(){
+        return fichas;
     }
     
     //Cambia el color de una ficha
-    public void setFicha(int pos, String color){
-        fichas[pos-1]=color; 
+    public void setFichas(String[] fichas){
+        this.fichas = fichas; 
     }
     
     //Regresa la posicion
@@ -42,7 +50,7 @@ public class Secuencia {
     public boolean verificarFicha(String ficha, int pos){
         boolean pista=false;
         
-        if(fichas[pos-1]==ficha){
+        if(fichas[pos].equals(ficha)){
             pista=true;
         }
         
