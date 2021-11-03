@@ -55,11 +55,11 @@ public class ControlMaster {
         }
     }
     
-    //Ingresa una nueva combinacion (HAY QUE MODIFICAR)
-    public void nuevaCombinacion(String nueva, int posicion){
-        combinacionJugador.setFicha(posicion,nueva);
-    }
-    
+//    //Ingresa una nueva combinacion (HAY QUE MODIFICAR)
+//    public void nuevaCombinacion(String nueva, int posicion){
+//        combinacionJugador.setFicha(posicion,nueva);
+//    }
+//    
     
     /**
      * Constructor for objects of class MasterMind
