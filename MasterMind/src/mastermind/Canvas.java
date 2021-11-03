@@ -35,7 +35,7 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("Demostracion figuras", 1000, 600, 
+            canvasSingleton = new Canvas("MASTERMIND GAME", 1000, 600, 
                                          Color.white);
         }
         canvasSingleton.setVisible(true);
