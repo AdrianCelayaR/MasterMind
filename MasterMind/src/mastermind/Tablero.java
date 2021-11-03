@@ -21,6 +21,7 @@ public class Tablero {
     private int turnos;
     private ArrayList<Circle> fichas = new ArrayList();
     private ArrayList<Circle> agujeroBandera = new ArrayList();
+    private ArrayList<Circle> respuesta= new ArrayList(4);
     
     
     public Tablero(int turnos){
@@ -118,6 +119,29 @@ public class Tablero {
                     contador+=4;
                 }
                     
+    }
+    public void dibujarRespuesta(String resStr){
+        String[] color = resStr.split(" ");
+        int x=405;
+        int y=525;
+        for(int i=0;i<4;i++){
+            respuesta.add(new Circle());
+             if(color[i].equalsIgnoreCase("Az"))
+                        respuesta.get(i).changeColor("blue");
+                    else if(color[i].equalsIgnoreCase("Am"))
+                            respuesta.get(i).changeColor("yellow");
+                        else if(color[i].equalsIgnoreCase("Ro"))
+                                 respuesta.get(i).changeColor("red");
+                            else if(color[i].equalsIgnoreCase("Ve"))
+                                     respuesta.get(i).changeColor("green");
+                                else if(color[i].equalsIgnoreCase("Bl"))
+                                         respuesta.get(i).changeColor("white");
+                                    else if(color[i].equalsIgnoreCase("Ne"))
+                                             respuesta.get(i).changeColor("black");
+            respuesta.get(i).cambiarPosicion(x+(30*i), y);
+            respuesta.get(i).changeSize(25);
+            respuesta.get(i).makeVisible();
+        }
     }
     
     public void colocarBanderas(Bandera banderas){
