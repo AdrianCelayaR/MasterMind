@@ -96,18 +96,21 @@ public class MasterMind {
             colores = generarSecuencia();
         } while (!out.equalsIgnoreCase("NO"));
     }
-
-    public void reset() {
-        puntos = 0;
-
-    }
-
-    public static Bandera verificarCombinacion(Secuencia combinacionAdivinar, Secuencia combinacionJugador) {
-        Bandera banderas = new Bandera();
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                if (combinacionAdivinar.verificarFicha(combinacionJugador.getFicha(j), i) == true) {
-                    if (i == j) {
+    
+    /**
+     * Esta funcion se encarga de realizar la verificacion de la combinacion que ingresa el jugador con la combinacion
+     * que se crea por defecto en el juego (combinacionAdivinar), esto lo hace verificando los colores por su posicion
+     * combinacionAdivinar verifica la ficha de la posicion i con la ficha de la posicion j de conbinacionJugador
+     * si son iguales entonces regresa true y si la posicion donde se encontraron son iguales entonces la ficha 
+     * esta correctamente colocada si no pues quiere decir que si se encuentra pero en otra posicion.
+     * Esta funcion regresa un objeto Bandera que son las pistas de ese turno
+     */
+    public static Bandera verificarCombinacion(Secuencia combinacionAdivinar, Secuencia combinacionJugador){
+        Bandera banderas = new Bandera();     
+        for(int i=0;i<4; i++){
+            for(int j=0; j<4; j++){
+                if(combinacionAdivinar.verificarFicha(combinacionJugador.getFicha(j), i)==true){
+                    if(i==j){
                         banderas.setPin(i, "black");
                         j = 3;
                         puntos += 5;
@@ -121,9 +124,13 @@ public class MasterMind {
         }
         return banderas;
     }
-
-    public static String generarSecuencia() {
-        String color = "";
+    
+    /**
+     * Esta funcion se encarga de generar una secuencia de colores aleatoriamente que luego se convertira en la 
+     * combinacion que tiene que adivinar el jugador.
+     */
+    public static String generarSecuencia(){
+        String color="";
         Random alea = new Random();
 
         for (int i = 0; i < 4; i++) {
@@ -154,9 +161,15 @@ public class MasterMind {
         }
         return color;
     }
-
-    public static boolean comprobar(String colores) {
-        boolean ban = true;
+    
+    
+    /**
+     * Esta funcion se encarga de reaizar la comprobacion de colores que ingreso el jugador, si la combinacion de colores
+     * se encuentra entre los colores disponibles entonces regresa true que indica que todo es correcto, de caso contrario 
+     * regresa false y te indica el error.
+     */
+    public static boolean comprobar(String colores){
+        boolean ban=true;
         String[] colors = colores.split(" ");
         //System.out.println(colors.length);
         if (colors.length == 4) {

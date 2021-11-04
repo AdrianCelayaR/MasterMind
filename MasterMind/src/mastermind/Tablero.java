@@ -45,12 +45,16 @@ public class Tablero {
         return fichas;
     }
     
-    public void dibujarTablero(){
+    /**
+     * Este metodo nos permite poder dibujar el tablero a partir de una variable x y otra y, las cuales funcionan de guia 
+     * para dibujar tanto el tablero como las posiciones donde iran colocados las pistas y las fichas
+     */
+    public void dibujarTablero(){ 
         int x=405,y=495;
         
         tablero.changeColor("cafe");
-        tablero.cambiarPosicion(375, 50);
-        tablero.changeSize(250, 500);
+        tablero.cambiarPosicion(375, 20);
+        tablero.changeSize(250, 530);
         tablero.makeVisible();
         
         rec.changeColor("cafeDark");
@@ -61,7 +65,7 @@ public class Tablero {
         for(int i=0; i<fichas.size(); i++){
             if(i%4==0 && i!=0){
                 x=405;
-                y-=30;
+                y-=33;
             }
             fichas.get(i).changeColor("cafeDark");
             fichas.get(i).cambiarPosicion(x, y);
@@ -75,6 +79,9 @@ public class Tablero {
                 x=550;
                 y-=15;
             }
+            if(i%4==0 && i!=0){
+                y-=3;
+            }
             agujeroBandera.get(i).changeColor("cafeDark");
             agujeroBandera.get(i).cambiarPosicion(x, y);
             agujeroBandera.get(i).changeSize(10);
@@ -84,7 +91,10 @@ public class Tablero {
         }
     }
     
-    
+    /**
+     * Este metodo nos regresa un vector tipo String el cual se genera a partir de un String cadena que se separara
+     * por espacios para poder formar el vector
+     */
     public String[] colores(String colores){
         String[] color = colores.split(" ");
         //for(int i=0; i<color.length; i++){
@@ -93,6 +103,14 @@ public class Tablero {
         return color;
     }
     
+    /**
+     * Este metodo nos permite colocar las fichas en el tablero a partir de los agujeros previamente colocados en la 
+     * funcion "dibujarTablero" los cuales a partir de llamar a la funcion "colores" obtendremos el vector de colores
+     * que ingrese el jugador para poder determinar cuales colores ingreso el y poder realizar las modificaciones
+     * tambien nos indica si uno de los colores es invalido.
+     * Tambien llama a la funcion "colocarBanderas" con la finalidad de que si la sentencia de colores ingresada es 
+     * correcta entonces coloca las banderas respectivas.
+     */
     public void colocarFichas(String colores, Bandera banderas){
         boolean ban=true;
         String[] colors = colores(colores);
@@ -144,6 +162,10 @@ public class Tablero {
         }
     }
     
+    /**
+     * Esta funcion nos permite modificar 4 elementos del arreglo de agujeroBandera con la finalidad de a partir de la 
+     * sentencia ingresada poder modificar el color de dicho arreglo y poder obtener las pistas
+     */
     public void colocarBanderas(Bandera banderas){
         for(int i=0; i<4; i++){
             agujeroBandera.get(contador+i).changeColor(banderas.getPin(i));
@@ -151,6 +173,10 @@ public class Tablero {
     }
     
     
+    /**
+     * Esta funcion crea los objetos correspondientes y llena los arreglos dependiendo de los intentos que solicite el 
+     * usuario.
+     */
     public int asignarTablero(int intentos){
         tablero = new Rectangulo();
         rec = new Rectangulo();

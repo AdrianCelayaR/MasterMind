@@ -46,7 +46,7 @@ public class Secuencia {
         this.posicion=posicion;
     }
     
-    //Verifica si la ficha se encuentra y regresa un boolean
+    //Verifica si la ficha se encuentra y regresa un boolean de confirmacion
     public boolean verificarFicha(String ficha, int pos){
         boolean pista=false;
         
