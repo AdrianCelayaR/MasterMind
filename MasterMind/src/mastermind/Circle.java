@@ -12,7 +12,8 @@ import java.awt.geom.*;
  * A circle that can be manipulated and that draws itself on a canvas.
  * 
  * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * @version 04/11/21
+ * @author Adrian Celaya ft. Oscar Plata
  */
 
 public class Circle

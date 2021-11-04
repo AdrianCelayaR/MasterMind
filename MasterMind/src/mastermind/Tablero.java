@@ -9,8 +9,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
+ * Clase que modela graficamente el tablero del juego
  *
- * @author ramjam
+ * @version 04/11/21
+ * @author Adrian Celaya ft. Oscar Plata
  */
 public class Tablero {
     HashSet<String> allColors = new HashSet<>();
@@ -138,6 +140,7 @@ public class Tablero {
                 }
                     
     }
+    //Metodo que muestra las fichas de respuesta correcta del juego
     public void dibujarRespuesta(String resStr){
         String[] color = resStr.split(" ");
         int x=405;

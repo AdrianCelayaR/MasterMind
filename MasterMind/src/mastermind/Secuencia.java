@@ -6,8 +6,10 @@
 package mastermind;
 
 /**
+ * Clase Clase que modela las secuencias de colores de las fichas del juego
  *
- * @author ramjam
+ * @version 04/11/21
+ * @author Adrian Celaya ft. Oscar Plata
  */
 public class Secuencia {
     

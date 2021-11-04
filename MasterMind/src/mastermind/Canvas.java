@@ -18,7 +18,8 @@ import java.util.*;
  * @author: Bruce Quig
  * @author: Michael Kölling (mik)
  *
- * @version 2016.02.29
+ * @version 04/11/21
+ * @author Adrian Celaya ft. Oscar Plata
  */
 public class Canvas
 {

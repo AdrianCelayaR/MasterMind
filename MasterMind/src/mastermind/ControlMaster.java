@@ -6,7 +6,7 @@
 package mastermind;
 
 /**
- *
+ * NO SE USA ESTA CLASE
  * @author ramjam
  */
 public class ControlMaster {
