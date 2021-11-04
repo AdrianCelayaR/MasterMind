@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @author Adrian Celaya ft. Oscar Plata
  */
 public class MasterMind {
-
+// 
     public static int puntos = 0;
 
     public static void main(String[] args) {
