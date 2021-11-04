@@ -48,8 +48,8 @@ public class Tablero {
         int x=405,y=495;
         
         tablero.changeColor("cafe");
-        tablero.cambiarPosicion(375, 50);
-        tablero.changeSize(250, 500);
+        tablero.cambiarPosicion(375, 20);
+        tablero.changeSize(250, 530);
         tablero.makeVisible();
         
         rec.changeColor("cafeDark");
@@ -60,7 +60,7 @@ public class Tablero {
         for(int i=0; i<fichas.size(); i++){
             if(i%4==0 && i!=0){
                 x=405;
-                y-=30;
+                y-=33;
             }
             fichas.get(i).changeColor("cafeDark");
             fichas.get(i).cambiarPosicion(x, y);
@@ -73,6 +73,9 @@ public class Tablero {
             if(i%2==0 && i!=0){
                 x=550;
                 y-=15;
+            }
+            if(i%4==0 && i!=0){
+                y-=3;
             }
             agujeroBandera.get(i).changeColor("cafeDark");
             agujeroBandera.get(i).cambiarPosicion(x, y);
